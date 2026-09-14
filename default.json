@@ -1,18 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "公共 Renovate 预设：等待 CI 不再 pending 再创建 PR，小版本自动合并，大版本手动审核",
-  "extends": ["config:recommended"],
-  "prCreation": "not-pending",
-  "prNotPendingHours": 2,
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["patch", "minor"],
-      "automerge": true,
-      "requiredStatusChecks": ["build", "test", "lint"]
-    },
-    {
-      "matchUpdateTypes": ["major"],
-      "automerge": false
-    }
-  ]
+  "description": "默认入口，使用base基础预设",
+  "extends": ["./presets/base"]
 }
