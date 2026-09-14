@@ -1,9 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Monorepo多包仓库预设",
+  "description": "Node.js Application 后端应用预设",
   "extends": ["./base"],
   "rangeStrategy": "pin",
-  "monorepo": true,
   "packageRules": [
     {
       "matchUpdateTypes": ["patch", "minor"],
