@@ -17,6 +17,7 @@ jobs:
       - name: Validate all presets
         run: |
           renovate-config-validator default.json
+          renovate-config-validator renovate.json
           renovate-config-validator presets/base.json
           renovate-config-validator presets/node-app.json
           renovate-config-validator presets/node-lib.json
