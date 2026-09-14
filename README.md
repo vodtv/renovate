@@ -1,14 +1,16 @@
 # renovate-config
-集中管理的Renovate共享预设仓库
+共享 Renovate 预设仓库，抽离公共base，按项目类型区分配置
 
-## 环境预设列表
-- default: base 基础配置
-- dev: 开发环境
-- test: 测试环境
-- prod: 生产环境
+## Presets 列表
+- `default`：node-app 应用预设
+- `base`：底层公共基础预设（一般不直接引用）
+- `node-app`：Node.js 后端应用
+- `node-lib`：Node.js 开源类库/SDK
+- `docker`：Docker镜像项目
+- `monorepo`：pnpm monorepo 多包仓库
 
-## 在业务仓库如何引用
-### 方式1：使用默认base
+## 业务仓库引用方式
+### 直接使用默认(node-app)
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
