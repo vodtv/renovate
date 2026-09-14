@@ -1,12 +1,37 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "基础公共预设，所有项目类型共享",
-  "extends": ["config:recommended"],
+  "description": "基础公共预设，所有项目类型共享，参考 s-theo 风格",
+  "extends": [
+    "config:recommended",
+    "customManagers:biomeVersions",
+    "group:all",
+    ":npm",
+    ":semanticCommits",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    ":assignee(s-theo)",
+    ":maintainLockFilesWeekly"
+  ],
+  "labels": ["dependencies"],
+  "timezone": "Asia/Shanghai",
   "prCreation": "not-pending",
   "prNotPendingHours": 2,
-  "labels": ["deps"],
   "dependencyDashboard": true,
   "schedule": ["before 6am on monday"],
   "commitMessagePrefix": "deps",
-  "rebaseWhen": "auto"
+  "rebaseWhen": "auto",
+  "packageRules": [
+    {
+      "bumpVersion": "prerelease",
+      "matchPackageNames": ["vitepress"]
+    },
+    {
+      "description": "Hold TypeScript 7 upgrades for manual approval",
+      "matchPackageNames": ["typescript"],
+      "matchCurrentVersion": "<7",
+      "matchNewValue": "/^[~^]?7\\./",
+      "groupName": "TypeScript 7",
+      "groupSlug": "typescript-7",
+      "dependencyDashboardApproval": true
+    }
+  ]
 }
