@@ -1,5 +1,5 @@
 # renovate
-Shared Renovate presets for VODTV projects.
+Shared Renovate presets for vodtv projects.
 
 ## Presets
 - default: node-app
