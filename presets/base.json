@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate基础通用预设",
+  "extends": ["config:recommended"],
+  "prCreation": "not-pending",
+  "prNotPendingHours": 2,
+  "labels": ["dependencies"],
+  "dependencyDashboard": true,
+  "schedule": ["before 6am on monday"]
+}
