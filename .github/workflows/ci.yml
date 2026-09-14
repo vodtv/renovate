@@ -1,0 +1,24 @@
+name: Validate Renovate Presets
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install renovate
+        run: npm install -g renovate
+      - name: Validate all presets
+        run: |
+          renovate-config-validator default.json
+          renovate-config-validator presets/base.json
+          renovate-config-validator presets/node-app.json
+          renovate-config-validator presets/node-lib.json
+          renovate-config-validator presets/docker.json
+          renovate-config-validator presets/monorepo.json
