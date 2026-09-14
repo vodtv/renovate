@@ -1,5 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Renovate公共预设默认入口，默认使用node-app",
   "extends": ["./presets/node-app"]
 }
