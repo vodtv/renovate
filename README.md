@@ -13,5 +13,5 @@ Shared Renovate presets for VODTV projects.
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>VODTV/renovate"]
+  "extends": ["github>vodtv/renovate"]
 }
