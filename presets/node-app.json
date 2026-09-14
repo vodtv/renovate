@@ -1,6 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Node.js Application 后端应用预设",
   "extends": ["./base"],
   "rangeStrategy": "pin",
   "packageRules": [
