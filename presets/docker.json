@@ -1,6 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Docker镜像项目预设",
   "extends": ["./base"],
   "labels": ["deps", "docker"],
   "commitMessagePrefix": "deps(docker)",
