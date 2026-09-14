@@ -1,10 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Renovate基础通用预设",
+  "description": "基础公共预设，所有项目类型共享",
   "extends": ["config:recommended"],
   "prCreation": "not-pending",
   "prNotPendingHours": 2,
-  "labels": ["dependencies"],
+  "labels": ["deps"],
   "dependencyDashboard": true,
-  "schedule": ["before 6am on monday"]
+  "schedule": ["before 6am on monday"],
+  "commitMessagePrefix": "deps",
+  "rebaseWhen": "auto"
 }
