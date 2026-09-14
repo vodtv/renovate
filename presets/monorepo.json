@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["./base"],
   "rangeStrategy": "pin",
-  "monorepo": true,
+  "monorepoStrategies": ["jsonc"],
   "packageRules": [
     {
       "matchUpdateTypes": ["patch", "minor"],
